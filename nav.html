@@ -1,0 +1,56 @@
+				<!DOCTYPE HTML>
+				<html>
+				<head>
+					<title>导航栏</title>
+					<meta http-equiv="Content-Type" content="text/html" charset="utf-8">
+					<style type="text/css">
+					*{padding: 0;margin: 0}
+					#nav{width: 800px;position: relative;top: 50px;left:300px;}
+					#nav li{list-style-type: none;float: left;background-color: #909090;}
+					#nav li a{display: block;width: 100px;color:#FFF;line-height: 40px;text-align: center;text-decoration: none;border-right: 2px solid #FFF;}
+					#nav ul{float: none;position: absolute;left: 102px;padding: 0;display: none;}
+					#nav ul li{float: none;border-top: 2px solid #FFF;}
+					#nav ul ul{position: absolute;left: 102px;top:0;display: none;}
+					#nav li:hover{background-color: #808080;}
+					#nav li:hover ul{display: block;}
+					#nav li:hover ul ul{display: none;}
+					#nav ul li:hover  ul{display: block;}
+					</style>
+				</head>
+				<body>
+					<ul id="nav">
+						<li><a href="#">首页</a></li>
+
+						<li>
+							<a href="#">课程介绍</a>
+							<ul>
+								<li><a href="#">前端课程</a>
+									<ul>
+										<li><a href="#">javascript</a></li>
+										<li><a href="#">html</a></li>
+										<li><a href="#">css</a></li>
+									</ul>
+								</li>
+								<li><a href="#">中端课程</a>
+									<ul>
+										<li><a href="#">xml</a></li>
+										<li><a href="#">xhtml</a></li>
+										<li><a href="#">cs</a></li>
+									</ul>
+								</li>
+								<li><a href="#">后端课程</a>
+									<ul>
+										<li><a href="#">php</a></li>
+										<li><a href="#">json</a></li>
+										<li><a href="#">css</a></li>
+									</ul>
+								</li>
+							</ul>
+						</li>
+
+						<li><a href="#">学习中心</a></li>
+
+						<li><a href="#">关于我们</a></li>
+					</ul>
+				</body>
+				</html>

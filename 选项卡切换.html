@@ -1,0 +1,47 @@
+<!DOCTYPE HTML>
+<html lang="zh">
+	<head>
+	<meta charset="utf-8" />
+		<style type="text/css">
+		*{padding: 0;margin: 0;list-style-type: none;}
+		#box{width: 400px;height: 400px;border: 1px solid #808080;margin: 20px auto;}
+		#box ul{width: 400px;float: left;margin-bottom: 20px;}
+		#box ul li{float: left;width: 80px;border: 1px solid black;text-align: center;margin:0 5px;font-size: 20px;}
+		.hide{display: none;}
+		</style>
+		<script type="text/javascript">
+
+		window.onload=function(){
+			var li=document.getElementsByTagName("li");
+		var box=document.getElementById("box");
+		var div=box.getElementsByTagName("div");
+			for (var i =0; i < li.length; i++) {
+				li[i].index=i;
+			li[i].onclick=function(){
+				for(var n=0;n<li.length;n++){//这步是相对于未被点击部分的样式
+                li[n].className = "";
+                div[n].className = "hide";
+            }
+            this.className = "title";//再对点击事件添加相应的属性
+            div[this.index].className = "";//通过之前的index编号绑定的指定div
+			};
+		}
+	};
+		</script>
+	</head>
+	<body>
+		<div id="box">
+				<ul>
+					<li class="title">房产</li>
+					<li>家居</li>
+					<li>二手房</li>
+				</ul>
+			<div>275万购昌平邻铁三居 总价20万买一居<br/>200万内购五环三居 140万安家东三环<br/>北京首现零首付楼盘 53万购东5环50平<br/>京楼盘直降5000 中信府 公园楼王现房
+			</div>
+			<div class="hide">40平出租屋大改造 美少女的混搭小窝<br/>经典清新简欧爱家 90平老房焕发新生<br/>新中式的酷色温情 66平撞色活泼家居<br/>瓷砖就像选好老婆 卫生间烟道的设计
+			</div>
+			<div  class="hide">通州豪华3居260万 二环稀缺2居250w甩<br/>西3环通透2居290万 130万2居限量抢购<br/>黄城根小学学区仅260万 121平70万抛!<br/>独家别墅280万 苏州桥2居优惠价248万
+			</div>
+		</div>
+	</body>
+</html>

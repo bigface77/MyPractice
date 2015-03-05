@@ -1,0 +1,20 @@
+<!DOCTYPE HTML>
+<html>
+	<head>
+		<title>Digital Clock</title>
+		<script type="text/javascript">
+		//定义一个函数用以显示当前时间
+		function displayTime(){
+			var elt = document.getElementById("clock");
+			var now = new Date();
+			elt.innerHTML = now;//.toLocaleTimeString();
+			setTimeout(displayTime,1000);
+		}
+		window.onload = displayTime;
+		</script>
+	</head>
+	<body>
+		<h1>Digital Clock</h1>
+		<span id="clock"></span>
+	</body>
+</html>

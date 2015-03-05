@@ -1,0 +1,46 @@
+<!DOCTYPE HTML>
+<html>
+	<head>
+	<meta charset="utf-8"/>
+		<title>旋转广告</title>
+		<style type="text/css">
+		#box{width: 320px;height: 483px;margin: 10px auto;border:2px solid #909090;overflow: hidden;}
+		#ad{width:700%;height: 483px;margin: 0;padding: 0}
+		/*img{width: 18%;margin:0;padding: 0;}*/
+		</style>
+		<script type="text/javascript" src="jquery-1.11.2.min.js"></script>
+		<script type="text/javascript">
+		$(function(){
+			var ads = $("#ad");
+			var i = 1;
+			var speed = 1000;
+			function scroll(){
+				if (i==6) {
+					i = 0;
+					speed = 1;
+				} else { 
+					speed = 1000;
+				}
+			    var mgLength = "-" + i *102 +"%";
+				setTimeout(scroll,2000);
+				ads.animate({marginLeft:mgLength},speed);
+				i++;
+				
+			}	
+			setTimeout(scroll,2000);
+		})
+		</script>
+	</head>
+	<body>
+	       <div id="box">
+			<div id="ad">
+				<img src="1.jpg"/>
+				<img src="2.jpg"/>
+				<img src="3.jpg"/>
+				<img src="4.jpg"/>
+				<img src="5.jpg"/>
+				<img src="6.jpg" />
+			</div>
+			</div>
+	</body>
+</html>

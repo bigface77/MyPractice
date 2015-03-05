@@ -1,0 +1,44 @@
+<!DOCTYPE HTML>
+<html>
+	<head>
+		<meta http-equiv="Content-Type" content="text/html" charset="utf-8" />
+		<title>下拉框</title>
+		<style type="text/css">
+		*{padding: 0; margin: 0;list-style-type: none}
+		#nav{width: 700px;position: relative;left: 300px;top: 50px;}
+		#nav li{float: left;background-color: #909090;color: #000:;}
+		#nav a{display: block;width: 100px;line-height: 50px;text-align: center;text-decoration: none; border-right: 2px solid white;}
+		#nav ul{position: absolute;left: 102px;top: 50px;display: none;border-top: 2px solid white;}
+		#nav li:hover,#nav ul li:hover{background-image: url(bg.jpg); background-repeat: repeat-x;color:#fff;}
+		#nav li:hover ul{display: block;}
+		</style>
+		<script type="text/javascript" src="jquery-1.11.2.min.js"></script>
+		<script type="text/javascript">	
+		$(document).ready(function(){
+			$("#nav li").mousemove(function(){
+				$(this).find("ul").slideDown("1000");
+			});
+			$("#nav li").mouseleave(function(){
+				$(this).find("ul").slideUp("slow");
+			})
+		})
+		</script>
+	</head>
+	<body>
+		<ul id="nav">
+			<li><a href="#" style="background-image: url(bg.jpg); background-repeat: repeat-x;">慕课网</a></li>
+
+			<li><a href="#">课程大厅</a>
+			<ul class="uu"> 
+				<li><a href="#">javascript</a></li>
+				<li><a href="#">html</a></li>
+				<li><a href="#">css</a></li>
+			</ul>
+			</li>
+
+			<li><a href="#">学习中心</a></li>
+			<li><a href="#">联系我们</a></li>
+		</ul>
+	</body>
+
+</html>

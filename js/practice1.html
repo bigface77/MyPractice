@@ -1,0 +1,37 @@
+	<!DOCTYPE　html>
+	<html lang="zh">
+		<head>
+			<title>js特效1</title>
+			<meta http-equiv="Contect-Type" content="text/html" charset="utf-8" />
+			<script type="text/javascript">
+			function initEvent()
+			{
+				varlinks = document.getElementByTagName("a");
+				for(var i = 0;i < links.length;i + +)
+					{
+						var link = links[i];
+						link.onmouseover = onmouse;
+		}
+	}
+	function onmouse()
+	{
+		var div = document.createElement("div");
+	div.style.position = "absolute";
+	div.style.top = window.event.clientY;
+	div.style.left = window.event.clientX;
+	div.innerHTML = "saefagfawefaw < font color ='red'>哈哈if</font>";
+	document.body.appendChild(div);
+	}
+			</script>
+		</head>
+		<body onload="initEvebt()">
+			<a href="http://www.baidu.com" title="aesfweaf;ah">百度</a><br />
+			<br />
+			<a href="http://www.baidu.com" title="afwaajmalkm">新浪</a><br />
+			<br />
+			<a href="http://www.baidu.com" title="afwaajmalkm">谷歌</a><br />
+			<br />
+			<a href="http://www.baidu.com" title="afwaajmalkm">腾讯</a><br />
+			<br />
+		</body>
+		</html>
